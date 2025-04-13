@@ -1,0 +1,494 @@
+{
+  "contractName": "BaseStructs",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.28+commit.7893614a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/BaseStructs.sol\":\"BaseStructs\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/BaseStructs.sol\":{\"keccak256\":\"0xd7bde9d45568d935921e77d762467b45ec3eb0dbcda090608306707f5a50fc36\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3106e1bf45955815d0db82ae58febb43a17305f3c89215ccad6dcc78be13c9d6\",\"dweb:/ipfs/QmUVWQ4ytijq3qt5giQdCTyYPi46vyFgdw747nWukMA7bz\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600e575f5ffd5b50603e80601a5f395ff3fe60806040525f5ffdfea264697066735822122064f4224c161249105235f9705a645c76d2e532943c0802486bc69021627a166e64736f6c634300081c0033",
+  "deployedBytecode": "0x60806040525f5ffdfea264697066735822122064f4224c161249105235f9705a645c76d2e532943c0802486bc69021627a166e64736f6c634300081c0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "58:454:6:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "58:454:6:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.28;\n\ncontract BaseStructs {\n    struct Capsule {\n        uint256 id;\n        address owner;\n        string dataURI;\n        bool claimed;\n    }\n\n    struct Claim {\n        uint256 capsuleId;\n        address claimer;\n        uint256 timestamp;\n    }\n\n    struct Proposal {\n        uint256 id;\n        address proposer;\n        string description;\n        uint256 votesFor;\n        uint256 votesAgainst;\n        uint256 createdAt;\n        bool executed;\n    }\n}",
+  "sourcePath": "/Users/jameschapman/capsule-core/contracts/BaseStructs.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/BaseStructs.sol",
+    "exportedSymbols": {
+      "BaseStructs": [
+        503
+      ]
+    },
+    "id": 504,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 471,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".28"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:24:6"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "BaseStructs",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 503,
+        "linearizedBaseContracts": [
+          503
+        ],
+        "name": "BaseStructs",
+        "nameLocation": "67:11:6",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "BaseStructs.Capsule",
+            "id": 480,
+            "members": [
+              {
+                "constant": false,
+                "id": 473,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "118:2:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 480,
+                "src": "110:10:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 472,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "110:7:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 475,
+                "mutability": "mutable",
+                "name": "owner",
+                "nameLocation": "138:5:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 480,
+                "src": "130:13:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 474,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "130:7:6",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 477,
+                "mutability": "mutable",
+                "name": "dataURI",
+                "nameLocation": "160:7:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 480,
+                "src": "153:14:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 476,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "153:6:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 479,
+                "mutability": "mutable",
+                "name": "claimed",
+                "nameLocation": "182:7:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 480,
+                "src": "177:12:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 478,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "177:4:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Capsule",
+            "nameLocation": "92:7:6",
+            "nodeType": "StructDefinition",
+            "scope": 503,
+            "src": "85:111:6",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "BaseStructs.Claim",
+            "id": 487,
+            "members": [
+              {
+                "constant": false,
+                "id": 482,
+                "mutability": "mutable",
+                "name": "capsuleId",
+                "nameLocation": "233:9:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 487,
+                "src": "225:17:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 481,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "225:7:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 484,
+                "mutability": "mutable",
+                "name": "claimer",
+                "nameLocation": "260:7:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 487,
+                "src": "252:15:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 483,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "252:7:6",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 486,
+                "mutability": "mutable",
+                "name": "timestamp",
+                "nameLocation": "285:9:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 487,
+                "src": "277:17:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 485,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "277:7:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Claim",
+            "nameLocation": "209:5:6",
+            "nodeType": "StructDefinition",
+            "scope": 503,
+            "src": "202:99:6",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "BaseStructs.Proposal",
+            "id": 502,
+            "members": [
+              {
+                "constant": false,
+                "id": 489,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "341:2:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 502,
+                "src": "333:10:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 488,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "333:7:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 491,
+                "mutability": "mutable",
+                "name": "proposer",
+                "nameLocation": "361:8:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 502,
+                "src": "353:16:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 490,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "353:7:6",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 493,
+                "mutability": "mutable",
+                "name": "description",
+                "nameLocation": "386:11:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 502,
+                "src": "379:18:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 492,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "379:6:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 495,
+                "mutability": "mutable",
+                "name": "votesFor",
+                "nameLocation": "415:8:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 502,
+                "src": "407:16:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 494,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "407:7:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 497,
+                "mutability": "mutable",
+                "name": "votesAgainst",
+                "nameLocation": "441:12:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 502,
+                "src": "433:20:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 496,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "433:7:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 499,
+                "mutability": "mutable",
+                "name": "createdAt",
+                "nameLocation": "471:9:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 502,
+                "src": "463:17:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 498,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "463:7:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 501,
+                "mutability": "mutable",
+                "name": "executed",
+                "nameLocation": "495:8:6",
+                "nodeType": "VariableDeclaration",
+                "scope": 502,
+                "src": "490:13:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 500,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "490:4:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Proposal",
+            "nameLocation": "314:8:6",
+            "nodeType": "StructDefinition",
+            "scope": 503,
+            "src": "307:203:6",
+            "visibility": "public"
+          }
+        ],
+        "scope": 504,
+        "src": "58:454:6",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "32:480:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.28+commit.7893614a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2025-04-13T16:58:49.895Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

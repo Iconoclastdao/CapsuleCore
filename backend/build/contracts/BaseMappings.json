@@ -1,0 +1,429 @@
+{
+  "contractName": "BaseMappings",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.28+commit.7893614a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Mappings and relationships\",\"kind\":\"dev\",\"methods\":{},\"title\":\"BaseMappings\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/BaseMappings.sol\":\"BaseMappings\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/BaseMappings.sol\":{\"keccak256\":\"0x3db3d4f2ff32fcc24e10723719dbe827a7d765a0d00f43117d15f951d5c1ace3\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://365ad56c03f72ca26e60eeeb3bafeba249d3a120b4c8420db5b0e62f065ab40d\",\"dweb:/ipfs/QmVuPxPTSccLL9pkaebWs2gGPzydwSpLV8eQ4UBR6F3oUd\"]},\"project:/contracts/BaseStructs.sol\":{\"keccak256\":\"0xd7bde9d45568d935921e77d762467b45ec3eb0dbcda090608306707f5a50fc36\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3106e1bf45955815d0db82ae58febb43a17305f3c89215ccad6dcc78be13c9d6\",\"dweb:/ipfs/QmUVWQ4ytijq3qt5giQdCTyYPi46vyFgdw747nWukMA7bz\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600e575f5ffd5b50603e80601a5f395ff3fe60806040525f5ffdfea2646970667358221220113c3a480b04d6ed6e2c12573b8b6dd95192cd633b23542b89301183065efb6764736f6c634300081c0033",
+  "deployedBytecode": "0x60806040525f5ffdfea2646970667358221220113c3a480b04d6ed6e2c12573b8b6dd95192cd633b23542b89301183065efb6764736f6c634300081c0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "153:510:5:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "153:510:5:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.28;\n\nimport \"./BaseStructs.sol\";\n\n/**\n * @title BaseMappings\n * @dev Mappings and relationships\n */\ncontract BaseMappings is BaseStructs {\n    // Capsules by ID\n    mapping(uint256 => Capsule) internal capsules;\n\n    // Tracks if a capsule has been claimed\n    mapping(uint256 => bool) internal claimedCapsules;\n\n    // Tracks claims made by users\n    mapping(address => Claim[]) internal userClaims;\n\n    // Governance proposals by ID\n    mapping(uint256 => Proposal) internal proposals;\n\n    // Track if an address has voted on a proposal\n    mapping(uint256 => mapping(address => bool)) internal hasVoted;\n}",
+  "sourcePath": "/Users/jameschapman/capsule-core/contracts/BaseMappings.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/BaseMappings.sol",
+    "exportedSymbols": {
+      "BaseMappings": [
+        469
+      ],
+      "BaseStructs": [
+        503
+      ]
+    },
+    "id": 470,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 438,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".28"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:24:5"
+      },
+      {
+        "absolutePath": "project:/contracts/BaseStructs.sol",
+        "file": "./BaseStructs.sol",
+        "id": 439,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 470,
+        "sourceUnit": 504,
+        "src": "58:27:5",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 441,
+              "name": "BaseStructs",
+              "nameLocations": [
+                "178:11:5"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 503,
+              "src": "178:11:5"
+            },
+            "id": 442,
+            "nodeType": "InheritanceSpecifier",
+            "src": "178:11:5"
+          }
+        ],
+        "canonicalName": "BaseMappings",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 440,
+          "nodeType": "StructuredDocumentation",
+          "src": "87:65:5",
+          "text": " @title BaseMappings\n @dev Mappings and relationships"
+        },
+        "fullyImplemented": true,
+        "id": 469,
+        "linearizedBaseContracts": [
+          469,
+          503
+        ],
+        "name": "BaseMappings",
+        "nameLocation": "162:12:5",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 447,
+            "mutability": "mutable",
+            "name": "capsules",
+            "nameLocation": "255:8:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 469,
+            "src": "218:45:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Capsule_$480_storage_$",
+              "typeString": "mapping(uint256 => struct BaseStructs.Capsule)"
+            },
+            "typeName": {
+              "id": 446,
+              "keyName": "",
+              "keyNameLocation": "-1:-1:-1",
+              "keyType": {
+                "id": 443,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "226:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "218:27:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Capsule_$480_storage_$",
+                "typeString": "mapping(uint256 => struct BaseStructs.Capsule)"
+              },
+              "valueName": "",
+              "valueNameLocation": "-1:-1:-1",
+              "valueType": {
+                "id": 445,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 444,
+                  "name": "Capsule",
+                  "nameLocations": [
+                    "237:7:5"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 480,
+                  "src": "237:7:5"
+                },
+                "referencedDeclaration": 480,
+                "src": "237:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Capsule_$480_storage_ptr",
+                  "typeString": "struct BaseStructs.Capsule"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 451,
+            "mutability": "mutable",
+            "name": "claimedCapsules",
+            "nameLocation": "348:15:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 469,
+            "src": "314:49:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_bool_$",
+              "typeString": "mapping(uint256 => bool)"
+            },
+            "typeName": {
+              "id": 450,
+              "keyName": "",
+              "keyNameLocation": "-1:-1:-1",
+              "keyType": {
+                "id": 448,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "322:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "314:24:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_bool_$",
+                "typeString": "mapping(uint256 => bool)"
+              },
+              "valueName": "",
+              "valueNameLocation": "-1:-1:-1",
+              "valueType": {
+                "id": 449,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "333:4:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 457,
+            "mutability": "mutable",
+            "name": "userClaims",
+            "nameLocation": "442:10:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 469,
+            "src": "405:47:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_Claim_$487_storage_$dyn_storage_$",
+              "typeString": "mapping(address => struct BaseStructs.Claim[])"
+            },
+            "typeName": {
+              "id": 456,
+              "keyName": "",
+              "keyNameLocation": "-1:-1:-1",
+              "keyType": {
+                "id": 452,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "413:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "405:27:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_Claim_$487_storage_$dyn_storage_$",
+                "typeString": "mapping(address => struct BaseStructs.Claim[])"
+              },
+              "valueName": "",
+              "valueNameLocation": "-1:-1:-1",
+              "valueType": {
+                "baseType": {
+                  "id": 454,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 453,
+                    "name": "Claim",
+                    "nameLocations": [
+                      "424:5:5"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 487,
+                    "src": "424:5:5"
+                  },
+                  "referencedDeclaration": 487,
+                  "src": "424:5:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Claim_$487_storage_ptr",
+                    "typeString": "struct BaseStructs.Claim"
+                  }
+                },
+                "id": 455,
+                "nodeType": "ArrayTypeName",
+                "src": "424:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Claim_$487_storage_$dyn_storage_ptr",
+                  "typeString": "struct BaseStructs.Claim[]"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 462,
+            "mutability": "mutable",
+            "name": "proposals",
+            "nameLocation": "531:9:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 469,
+            "src": "493:47:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Proposal_$502_storage_$",
+              "typeString": "mapping(uint256 => struct BaseStructs.Proposal)"
+            },
+            "typeName": {
+              "id": 461,
+              "keyName": "",
+              "keyNameLocation": "-1:-1:-1",
+              "keyType": {
+                "id": 458,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "501:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "493:28:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Proposal_$502_storage_$",
+                "typeString": "mapping(uint256 => struct BaseStructs.Proposal)"
+              },
+              "valueName": "",
+              "valueNameLocation": "-1:-1:-1",
+              "valueType": {
+                "id": 460,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 459,
+                  "name": "Proposal",
+                  "nameLocations": [
+                    "512:8:5"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 502,
+                  "src": "512:8:5"
+                },
+                "referencedDeclaration": 502,
+                "src": "512:8:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Proposal_$502_storage_ptr",
+                  "typeString": "struct BaseStructs.Proposal"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 468,
+            "mutability": "mutable",
+            "name": "hasVoted",
+            "nameLocation": "652:8:5",
+            "nodeType": "VariableDeclaration",
+            "scope": 469,
+            "src": "598:62:5",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_mapping$_t_address_$_t_bool_$_$",
+              "typeString": "mapping(uint256 => mapping(address => bool))"
+            },
+            "typeName": {
+              "id": 467,
+              "keyName": "",
+              "keyNameLocation": "-1:-1:-1",
+              "keyType": {
+                "id": 463,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "606:7:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "598:44:5",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_mapping$_t_address_$_t_bool_$_$",
+                "typeString": "mapping(uint256 => mapping(address => bool))"
+              },
+              "valueName": "",
+              "valueNameLocation": "-1:-1:-1",
+              "valueType": {
+                "id": 466,
+                "keyName": "",
+                "keyNameLocation": "-1:-1:-1",
+                "keyType": {
+                  "id": 464,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "625:7:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "617:24:5",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                  "typeString": "mapping(address => bool)"
+                },
+                "valueName": "",
+                "valueNameLocation": "-1:-1:-1",
+                "valueType": {
+                  "id": 465,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "636:4:5",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                }
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 470,
+        "src": "153:510:5",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "32:631:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.28+commit.7893614a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2025-04-13T16:58:49.895Z",
+  "devdoc": {
+    "details": "Mappings and relationships",
+    "kind": "dev",
+    "methods": {},
+    "title": "BaseMappings",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
